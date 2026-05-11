@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8"/>
@@ -335,7 +335,55 @@
     .fab{position:absolute;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:var(--text);color:var(--surface);border:none;font-size:24px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow-md);z-index:50;transition:transform .2s,opacity .2s}
     .fab:hover{transform:scale(1.05)}
     .fab:active{transform:scale(.95)}
-    @media(max-width:760px){body{align-items:flex-start}#app{width:100vw;height:100vh;max-height:none;border-radius:0}.sidebar{display:none}.bottom-nav{display:block}.topbar{padding:0 18px;height:60px}.topbar-name{font-size:18px}.scroll{padding:16px 18px calc(90px + env(safe-area-inset-bottom,0px))}.dashboard-layout{flex-direction:column}.dashboard-side{width:100%}.dash-stats-grid{grid-template-columns:1fr}.history-filters{grid-template-columns:1fr}.cat-grid{grid-template-columns:1fr 1fr;gap:10px}.sav-balance{font-size:30px}.fab{bottom:calc(80px + env(safe-area-inset-bottom,0px))}#addSpendModal .budget-modal,#txEditModal .budget-modal,#quickAddModal .budget-modal{max-width:100%;border-radius:20px 20px 0 0}}
+    @media(max-width:760px){
+      body{align-items:flex-start}
+      #app{width:100vw;height:100%;min-height:100vh;max-height:none;border-radius:0}
+      .sidebar{display:none}
+      .bottom-nav{display:block}
+      .topbar{padding:0 14px;height:60px}
+      .topbar-name{font-size:17px;letter-spacing:-.02em}
+      .topbar-greet{font-size:12px}
+      .topbar-actions{gap:6px}
+      .topbar-icon-btn{width:34px;height:34px;font-size:15px}
+      .scroll{padding:14px 14px calc(90px + env(safe-area-inset-bottom,0px))}
+      .dashboard-layout{flex-direction:column;gap:14px}
+      .dashboard-side{width:100%}
+      .dash-stats-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .dash-stat-card{padding:14px}
+      .dash-stat-value{font-size:18px}
+      .section-card{padding:14px}
+      .section-title{font-size:14px}
+      .dist-header,.dist-row{grid-template-columns:1.2fr 70px 1fr 80px;gap:6px}
+      .history-filters{grid-template-columns:1fr 1fr;gap:8px}
+      .history-filters .history-filter-input:first-child{grid-column:1/-1}
+      .cat-grid{grid-template-columns:1fr 1fr;gap:10px}
+      .sav-balance{font-size:30px}
+      .sav-chips{gap:8px}
+      .fab{bottom:calc(80px + env(safe-area-inset-bottom,0px));right:16px}
+      .bh-row{grid-template-columns:1fr 1fr 1fr;gap:6px}
+      .bh-stat{padding:8px 10px}
+      .bh-stat-v{font-size:13px}
+      .daily-table-header,.dt-row,.daily-table-footer{grid-template-columns:44px 1fr 1fr 1fr;padding:10px 10px}
+      .dt-main{font-size:12px}
+      .dt-sub,.dt-diff{font-size:10px}
+      .forecast-val{width:70px;font-size:12px}
+      .forecast-month{width:60px;font-size:12px}
+      .addcard-modal{margin:16px;width:calc(100% - 32px);max-width:none}
+      .insight-grid{grid-template-columns:1fr 1fr}
+      .fav-grid{grid-template-columns:1fr 1fr}
+      .summary-stats{grid-template-columns:1fr 1fr}
+      .hero-balance{font-size:clamp(26px,7vw,40px)}
+      #addSpendModal .budget-modal,#txEditModal .budget-modal,#quickAddModal .budget-modal{max-width:100%;border-radius:20px 20px 0 0}
+      #addSpendModal,#txEditModal,#quickAddModal{align-items:flex-end;padding:0}
+    }
+    @media(max-width:400px){
+      .dash-stats-grid{grid-template-columns:1fr}
+      .dist-header,.dist-row{grid-template-columns:1fr 60px}
+      .dist-header>:nth-child(3),.dist-header>:nth-child(4),.dist-row>:nth-child(3),.dist-row>:nth-child(4){display:none}
+      .history-filters{grid-template-columns:1fr}
+      .bh-row{grid-template-columns:1fr 1fr;gap:6px}
+      .bh-row>:last-child{grid-column:1/-1}
+    }
     @media(min-width:761px){.bottom-nav{display:none}}
     /* ── My Card ── */
     .mycard-list{display:flex;flex-direction:column;gap:0;margin-bottom:12px}
@@ -352,7 +400,7 @@
     .mycard-add-btn:hover{background:var(--surface2);color:var(--text)}
     .mycard-hide-btn{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;color:var(--text-ter);background:var(--surface2);border:1px solid var(--border);transition:background .15s}
     .mycard-hide-btn:hover{background:var(--surface3);color:var(--text)}
-    .addcard-overlay{display:none;position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:600;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+    .addcard-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:600;align-items:center;justify-content:center;backdrop-filter:blur(4px);padding:16px}
     .addcard-overlay.open{display:flex}
     .addcard-modal{background:var(--surface);border-radius:20px;padding:24px;width:100%;max-width:380px;box-shadow:var(--shadow-lg)}
     .addcard-preview{height:88px;border-radius:14px;margin-bottom:18px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:14px 16px}
